@@ -2,6 +2,7 @@
 // key는 스프레드시트 열 순서를 정하고, label이 열 제목이 된다. 문항을 바꾸면 여기만 고친다.
 //
 // type: text(한 줄) · long(여러 줄) · choice(하나 고르기) · scale(점수)
+// screen: 과업을 할 화면 이름. '과업 1 · Home'처럼 과업 번호 옆에 붙는다.
 // gate: true를 주면 "과업을 마쳤어요"를 눌러야 질문이 열린다 (지금은 쓰지 않음 — 질문이 바로 보인다).
 
 // 참가자가 테스트할 서비스. 시작·첫인상 화면의 카드와 과업 화면에 링크로 보인다.
@@ -40,7 +41,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't1', task: 1,
+    id: 't1', task: 1, screen: 'Home',
     title: '시장 전체 파악',
     scenario: '미국 증시가 전체적으로 어땠는지 한두 문장으로 말해 주세요.',
     fields: [
@@ -50,7 +51,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't2', task: 2,
+    id: 't2', task: 2, screen: 'Home',
     title: '한국 시장으로 전환',
     scenario: '이번엔 한국 증시 브리핑을 보고 싶어요. 어떻게 하시겠어요?',
     fields: [
@@ -60,7 +61,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't3', task: 3,
+    id: 't3', task: 3, screen: 'Home',
     title: '특정 종목 브리핑 찾기',
     scenario: '보유 종목 중 엔비디아 소식만 골라서 보고 싶어요.',
     fields: [

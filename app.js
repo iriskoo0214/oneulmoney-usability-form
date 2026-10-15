@@ -80,7 +80,8 @@
     var html = '';
 
     if (step.task) {
-      html += '<p class="eyebrow">과업 ' + step.task + (step.optional ? ' · 선택' : '') + '</p>';
+      html += '<p class="eyebrow">과업 ' + step.task + (step.screen ? ' · ' + esc(step.screen) : '') +
+        (step.optional ? ' · 선택' : '') + '</p>';
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
       html += '<div class="scenario"><small>진행자가 드린 과업</small>' + esc(step.scenario) + '</div>';
       html += serviceCard();
