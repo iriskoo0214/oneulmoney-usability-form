@@ -69,6 +69,12 @@
     });
   }
 
+  // 시작·첫인상·과업 화면에 같은 모양으로 넣는 서비스 링크 카드
+  function serviceCard() {
+    return '<a class="service-card" href="' + esc(URL_) + '" target="_blank" rel="noopener">' +
+      '<img src="assets/logo.svg" alt="" /><span><b>오늘머니</b><small>' + esc(URL_TEXT) + '</small></span><i>열기 ↗</i></a>';
+  }
+
   function render() {
     var step = STEPS[state.index];
     var html = '';
@@ -76,8 +82,8 @@
     if (step.task) {
       html += '<p class="eyebrow">과업 ' + step.task + (step.optional ? ' · 선택' : '') + '</p>';
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
-      html += '<div class="scenario"><small>진행자가 드린 과업</small>' + esc(step.scenario) +
-        '<br /><a href="' + esc(URL_) + '" target="_blank" rel="noopener">오늘머니에서 해 보기 ↗</a></div>';
+      html += '<div class="scenario"><small>진행자가 드린 과업</small>' + esc(step.scenario) + '</div>';
+      html += serviceCard();
 
       if (state.skipped[step.id]) {
         html += '<div class="gate"><p>이 과업은 진행하지 않았어요.</p>' +
@@ -96,11 +102,8 @@
       html += '<p class="eyebrow">' + (state.index + 1) + ' / ' + STEPS.length + '</p>';
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
       if (step.desc) html += '<p class="step-desc">' + esc(step.desc) + '</p>';
-      // 시작과 첫인상 화면에서는 서비스 링크를 카드로 크게 보여준다 — 첫인상은 여기서 서비스를 처음 연다
-      if (step.id === 'start' || step.id === 'first') {
-        html += '<a class="service-card" href="' + esc(URL_) + '" target="_blank" rel="noopener">' +
-          '<img src="assets/logo.svg" alt="" /><span><b>오늘머니</b><small>' + esc(URL_TEXT) + '</small></span><i>열기 ↗</i></a>';
-      }
+      // 첫인상은 여기서 서비스를 처음 연다
+      if (step.id === 'start' || step.id === 'first') html += serviceCard();
       html += '<div class="fields">' + step.fields.map(fieldHTML).join('') + '</div>';
     }
 

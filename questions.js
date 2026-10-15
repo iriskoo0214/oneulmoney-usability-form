@@ -2,7 +2,7 @@
 // key는 스프레드시트 열 순서를 정하고, label이 열 제목이 된다. 문항을 바꾸면 여기만 고친다.
 //
 // type: text(한 줄) · long(여러 줄) · choice(하나 고르기) · scale(점수)
-// gate: 과업을 마친 뒤에 질문을 열어 보게 한다 — 과업 전에 후속 질문을 보면 답이 새어 나간다.
+// gate: true를 주면 "과업을 마쳤어요"를 눌러야 질문이 열린다 (지금은 쓰지 않음 — 질문이 바로 보인다).
 
 // 참가자가 테스트할 서비스. 시작·첫인상 화면의 카드와 과업 화면에 링크로 보인다.
 window.SERVICE_URL = 'https://oneulmoney.vercel.app';
@@ -40,9 +40,9 @@ window.STEPS = [
     ]
   },
   {
-    id: 't1', task: 1, gate: true,
+    id: 't1', task: 1,
     title: '시장 전체 파악',
-    scenario: '어젯밤 미국 증시가 전체적으로 어땠는지 한두 문장으로 말해 주세요.',
+    scenario: '미국 증시가 전체적으로 어땠는지 한두 문장으로 말해 주세요.',
     fields: [
       { key: 't1_seq', label: '과업 1 난이도', type: 'scale', seq: true, required: true },
       { key: 't1_q1', label: '3줄 요약만으로 충분했나요? 더 알고 싶은 것은?', type: 'long' },
@@ -50,7 +50,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't2', task: 2, gate: true,
+    id: 't2', task: 2,
     title: '한국 시장으로 전환',
     scenario: '이번엔 한국 증시 브리핑을 보고 싶어요. 어떻게 하시겠어요?',
     fields: [
@@ -60,7 +60,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't3', task: 3, gate: true,
+    id: 't3', task: 3,
     title: '특정 종목 브리핑 찾기',
     scenario: '보유 종목 중 엔비디아 소식만 골라서 보고 싶어요.',
     fields: [
@@ -69,7 +69,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't4', task: 4, gate: true,
+    id: 't4', task: 4,
     title: '읽은 카드 확인 처리',
     scenario: "방금 읽은 카드는 '다 봤다'고 표시해 두고 싶어요.",
     fields: [
@@ -79,7 +79,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't5', task: 5, gate: true,
+    id: 't5', task: 5,
     title: '하루 흐름 복기',
     scenario: 'SK하이닉스가 오늘 장중에 어떻게 움직였는지, 그리고 그 이유가 무엇이었는지 알고 싶어요.',
     fields: [
@@ -94,7 +94,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't6', task: 6, gate: true,
+    id: 't6', task: 6,
     title: '다른 종목으로 이동',
     scenario: '같은 화면에서 삼성전자의 오늘 흐름도 보고 싶어요.',
     fields: [
@@ -103,7 +103,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't7', task: 7, gate: true,
+    id: 't7', task: 7,
     title: '홈과 Portfolios 비교',
     scenario: 'SK하이닉스에 대해 Home 카드와 Portfolios 화면을 각각 봤는데, 두 화면은 어떻게 다른가요?',
     fields: [

@@ -44,7 +44,6 @@ button, input, textarea { font: inherit; color: inherit; letter-spacing: inherit
 .service-card b { display: block; font-size: 16px; font-weight: 600; }
 .service-card small { display: block; font-size: 13px; color: var(--gray-500); }
 .service-card i { margin-left: auto; font-style: normal; font-size: 14px; font-weight: 600; color: var(--primary-500); white-space: nowrap; }
-.scenario a { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--primary-500); text-decoration: none; }
 .progress { position: sticky; top: 56px; z-index: 5; height: 3px; background: var(--gray-150); }
 .progress__bar { height: 100%; width: 0; background: var(--primary-500); transition: width .3s ease; }
 
