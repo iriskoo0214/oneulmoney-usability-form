@@ -1,0 +1,5 @@
+# 로컬 확인용 — 배포할 필요 없다
+dev-server.mjs
+apps-script/
+README.md
+.claude/
