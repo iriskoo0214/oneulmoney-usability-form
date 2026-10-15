@@ -39,8 +39,7 @@ window.STEPS = [
     fields: [
       { key: 'fi_1', label: '방금 둘러본 화면은 어떤 서비스 같았나요?', type: 'long', required: true },
       { key: 'fi_2', label: '기억나는 내용이나 단어가 있나요?', type: 'long' },
-      { key: 'fi_3', label: '둘러보면서 든 생각이나 헷갈렸던 점을 자유롭게 적어 주세요', type: 'long' },
-      { key: 'fi_5', label: '맨 위 날짜와 "미국 데일리 브리핑"을 보면, 언제 장에 대한 이야기 같나요?', type: 'text' }
+      { key: 'fi_3', label: '둘러보면서 든 생각이나 헷갈렸던 점을 자유롭게 적어 주세요', type: 'long' }
     ]
   },
   {
