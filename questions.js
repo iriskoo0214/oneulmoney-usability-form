@@ -70,7 +70,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't4', task: 4,
+    id: 't4', task: 4, screen: 'Home',
     title: '읽은 카드 확인 처리',
     scenario: "방금 읽은 카드는 '다 봤다'고 표시해 두고 싶어요.",
     fields: [
@@ -80,7 +80,7 @@ window.STEPS = [
     ]
   },
   {
-    id: 't5', task: 5,
+    id: 't5', task: 5, screen: 'Portfolios',
     title: '하루 흐름 복기',
     scenario: 'SK하이닉스가 오늘 장중에 어떻게 움직였는지, 그리고 그 이유가 무엇이었는지 알고 싶어요.',
     fields: [
@@ -95,21 +95,22 @@ window.STEPS = [
     ]
   },
   {
-    id: 't6', task: 6,
+    id: 't6', task: 6, screen: 'Portfolios',
     title: '다른 종목으로 이동',
     scenario: '같은 화면에서 삼성전자의 오늘 흐름도 보고 싶어요.',
     fields: [
       { key: 't6_seq', label: '과업 6 난이도', type: 'scale', seq: true, required: true },
-      { key: 't6_q1', label: '화면에 화살표가 두 개 있는데, 각각 무엇을 한다고 생각하나요?', type: 'long' }
+      { key: 't6_q1', label: '포트폴리오 탭에서 날짜 옆 화살표가 두 개 있는데 각각 무엇을 한다고 생각하세요?', type: 'long' }
     ]
   },
   {
-    id: 't7', task: 7,
+    id: 't7', task: 7, screen: 'Home / Portfolios',
     title: '홈과 Portfolios 비교',
-    scenario: 'SK하이닉스에 대해 Home 카드와 Portfolios 화면을 각각 봤는데, 두 화면은 어떻게 다른가요?',
+    scenario: 'SK하이닉스에 대해 Home 카드와 Portfolios 화면을 각각 봤어요.',
     fields: [
       { key: 't7_seq', label: '과업 7 난이도', type: 'scale', seq: true, required: true },
-      { key: 't7_q1', label: '두 화면은 어떻게 다른가요? 각각 언제 열어 볼 것 같나요?', type: 'long' }
+      { key: 't7_q1', label: '홈 화면은 무엇을 하는 화면인 것 같나요?', type: 'long' },
+      { key: 't7_q2', label: '포트폴리오 화면은 무엇을 하는 화면인 것 같나요?', type: 'long' }
     ]
   },
   {
