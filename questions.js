@@ -31,12 +31,15 @@ window.STEPS = [
     ]
   },
   {
-    id: 'first',
+    // 진행자 없이 링크만 보내도 되게 과업처럼 상황 → 서비스 카드 → 질문 순으로 보여준다
+    id: 'first', eyebrow: '첫인상 · Home',
     title: '첫인상',
-    desc: '아래 카드로 오늘머니를 열어 둘러본 뒤, 진행자가 화면을 가리면 위의 두 문항을 적어 주세요. 마지막 문항은 화면을 다시 본 뒤에 적어 주세요.',
+    scenarioLabel: '상황',
+    scenario: '카카오톡으로 "7시 미국 데일리 브리핑을 확인하세요"라는 메시지와 링크를 받았다고 생각해 주세요. 아래 카드를 눌러 오늘머니를 1~2분 자유롭게 둘러본 뒤 돌아와서 답해 주세요.',
     fields: [
-      { key: 'fi_1', label: '방금 본 화면은 어떤 서비스 같았나요?', type: 'long', required: true },
-      { key: 'fi_2', label: '기억나는 내용이나 단어', type: 'long' },
+      { key: 'fi_1', label: '방금 둘러본 화면은 어떤 서비스 같았나요?', type: 'long', required: true },
+      { key: 'fi_2', label: '기억나는 내용이나 단어가 있나요?', type: 'long' },
+      { key: 'fi_3', label: '둘러보면서 든 생각이나 헷갈렸던 점을 자유롭게 적어 주세요', type: 'long' },
       { key: 'fi_5', label: '맨 위 날짜와 "미국 데일리 브리핑"을 보면, 언제 장에 대한 이야기 같나요?', type: 'text' }
     ]
   },

@@ -79,11 +79,13 @@
     var step = STEPS[state.index];
     var html = '';
 
-    if (step.task) {
-      html += '<p class="eyebrow">과업 ' + step.task + (step.screen ? ' · ' + esc(step.screen) : '') +
-        (step.optional ? ' · 선택' : '') + '</p>';
+    // 과업과 첫인상처럼 상황(scenario)이 있는 단계는 같은 모양으로 그린다
+    if (step.task || step.scenario) {
+      html += '<p class="eyebrow">' + (step.task
+        ? '과업 ' + step.task + (step.screen ? ' · ' + esc(step.screen) : '') + (step.optional ? ' · 선택' : '')
+        : esc(step.eyebrow || '')) + '</p>';
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
-      html += '<div class="scenario"><small>진행자가 드린 과업</small>' + esc(step.scenario) + '</div>';
+      html += '<div class="scenario"><small>' + esc(step.scenarioLabel || '진행자가 드린 과업') + '</small>' + esc(step.scenario) + '</div>';
       html += serviceCard();
 
       if (state.skipped[step.id]) {
@@ -103,8 +105,7 @@
       html += '<p class="eyebrow">' + (state.index + 1) + ' / ' + STEPS.length + '</p>';
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
       if (step.desc) html += '<p class="step-desc">' + esc(step.desc) + '</p>';
-      // 첫인상은 여기서 서비스를 처음 연다
-      if (step.id === 'start' || step.id === 'first') html += serviceCard();
+      if (step.id === 'start') html += serviceCard();
       html += '<div class="fields">' + step.fields.map(fieldHTML).join('') + '</div>';
     }
 
