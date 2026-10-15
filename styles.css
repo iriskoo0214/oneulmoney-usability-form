@@ -35,12 +35,6 @@ button, input, textarea { font: inherit; color: inherit; letter-spacing: inherit
 .logo { width: 32px; height: 32px; }
 .top__title { font-size: 15px; font-weight: 600; }
 .top__count { margin-left: auto; font-size: 13px; color: var(--gray-500); font-variant-numeric: tabular-nums; }
-.top__link {
-  flex: none; height: 32px; padding: 0 12px; border-radius: 999px;
-  display: inline-flex; align-items: center;
-  background: var(--gray-900); color: var(--gray-0);
-  font-size: 13px; font-weight: 600; text-decoration: none;
-}
 .service-card {
   display: flex; align-items: center; gap: 12px; margin-top: 20px;
   padding: 16px; border-radius: 16px; background: var(--gray-0);

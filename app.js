@@ -2,7 +2,6 @@
   var STEPS = window.STEPS;
   var URL_ = window.SERVICE_URL;
   var URL_TEXT = URL_.replace(/^https?:\/\//, '');
-  document.getElementById('serviceLink').href = URL_;
   var DRAFT_KEY = 'oneulmoney-ut-draft';
 
   var stepEl = document.getElementById('step');

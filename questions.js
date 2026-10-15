@@ -4,7 +4,7 @@
 // type: text(한 줄) · long(여러 줄) · choice(하나 고르기) · scale(점수)
 // gate: 과업을 마친 뒤에 질문을 열어 보게 한다 — 과업 전에 후속 질문을 보면 답이 새어 나간다.
 
-// 참가자가 테스트할 서비스. 상단 바·시작 화면·과업 화면에 링크로 보인다.
+// 참가자가 테스트할 서비스. 시작·첫인상 화면의 카드와 과업 화면에 링크로 보인다.
 window.SERVICE_URL = 'https://oneulmoney.vercel.app';
 
 window.STEPS = [
@@ -13,7 +13,7 @@ window.STEPS = [
     title: '시작하기',
     desc: '오늘머니 사용성 테스트에 참여해 주셔서 감사해요. 정답은 없고, 느낀 그대로 적어 주시면 돼요. 응답은 서비스 개선에만 쓰여요.',
     fields: [
-      { key: 'participant', label: '참가자 번호', type: 'text', required: true, placeholder: '진행자가 알려 드린 번호 (예: P1)' }
+      { key: 'participant', label: '닉네임', type: 'text', required: true, placeholder: '응답을 구분할 이름이면 돼요 (예: 오늘머니)' }
     ]
   },
   {
