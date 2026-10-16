@@ -100,10 +100,9 @@ window.STEPS = [
   {
     id: 't6', task: 6, screen: 'Portfolios',
     title: '다른 종목으로 이동',
-    scenario: '같은 화면에서 삼성전자의 오늘 흐름도 보고 싶어요.',
+    scenario: '같은 화면에서 현대차의 오늘 흐름도 보고 싶어요.',
     fields: [
-      { key: 't6_seq', label: '과업 6 난이도', type: 'scale', seq: true, required: true },
-      { key: 't6_q1', label: '포트폴리오 탭에서 날짜 옆 화살표가 두 개 있는데 각각 무엇을 한다고 생각하세요?', type: 'long' }
+      { key: 't6_seq', label: '과업 6 난이도', type: 'scale', seq: true, required: true }
     ]
   },
   {
