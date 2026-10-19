@@ -35,7 +35,7 @@ window.STEPS = [
       { key: 'pre_1', label: '보유 종목과 국내/해외 비중', type: 'long', placeholder: '예: 국내 3종목, 미국 2종목 — 국내 비중이 더 커요' },
       { key: 'pre_2', label: '평일 장중 시세 확인 빈도', type: 'choice', required: true,
         options: ['거의 안 봐요', '하루 1~2번', '하루 3~5번', '수시로 봐요'] },
-      { key: 'pre_3', label: '장을 못 본 날 내 종목을 확인하는 방법', type: 'long', placeholder: '쓰는 앱과 확인 순서를 적어 주세요' },
+      { key: 'pre_3', label: '주식 시장을 놓친 날, 내 종목은 어떻게 확인하세요?', type: 'long', placeholder: '예: 네이버 기사, MTS 내 기사 확인 등' },
       { key: 'pre_4', label: '그 과정에서 가장 번거롭거나 아쉬운 점', type: 'long' },
       { key: 'pre_5', label: '주가가 크게 움직였을 때 이유를 찾아보는지, 어디서 찾는지', type: 'long' }
     ]
