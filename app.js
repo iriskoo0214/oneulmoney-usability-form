@@ -106,6 +106,12 @@
       html += '<h1 class="step-title">' + esc(step.title) + '</h1>';
       if (step.desc) html += '<p class="step-desc">' + esc(step.desc) + '</p>';
       if (step.id === 'start') html += serviceCard();
+      if (step.intro) {
+        html += '<section class="intro"><h2>' + esc(step.intro.title) + '</h2><p class="intro__lead">' + esc(step.intro.lead) + '</p><ul>' +
+          step.intro.points.map(function (p) {
+            return '<li><span class="intro__tag">' + esc(p.tag) + '</span><div><b>' + esc(p.title) + '</b><p>' + esc(p.body) + '</p></div></li>';
+          }).join('') + '</ul></section>';
+      }
       html += '<div class="fields">' + step.fields.map(fieldHTML).join('') + '</div>';
     }
 

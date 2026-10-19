@@ -40,6 +40,14 @@ button, input, textarea { font: inherit; color: inherit; letter-spacing: inherit
   padding: 16px; border-radius: 16px; background: var(--gray-0);
   color: inherit; text-decoration: none;
 }
+.intro { margin-top: 12px; padding: 20px 16px; border-radius: 16px; background: var(--gray-0); }
+.intro h2 { font-size: 16px; font-weight: 600; }
+.intro__lead { margin-top: 6px; font-size: 15px; color: var(--gray-700); }
+.intro ul { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+.intro li { display: flex; gap: 12px; align-items: flex-start; }
+.intro__tag { flex: none; min-width: 76px; padding: 4px 8px; border-radius: 6px; background: var(--primary-50); color: var(--primary-500); font-size: 12px; font-weight: 600; text-align: center; }
+.intro li b { display: block; font-size: 15px; font-weight: 600; }
+.intro li p { margin-top: 2px; font-size: 14px; color: var(--gray-700); }
 .service-card img { width: 40px; height: 40px; border-radius: 10px; background: var(--primary-50); }
 .service-card b { display: block; font-size: 16px; font-weight: 600; }
 .service-card small { display: block; font-size: 13px; color: var(--gray-500); }
